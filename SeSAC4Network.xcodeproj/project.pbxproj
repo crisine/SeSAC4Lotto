@@ -17,6 +17,12 @@
 		FA01A7C62B56128A0067FFC1 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7C52B56128A0067FFC1 /* LottoViewController.swift */; };
 		FA01A7C82B5621970067FFC1 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7C72B5621970067FFC1 /* MarketViewController.swift */; };
 		FA01A7CA2B56577A0067FFC1 /* LottoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7C92B56577A0067FFC1 /* LottoAPIManager.swift */; };
+		FA36CAAE2B57CF7C00A7567D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36CAAD2B57CF7C00A7567D /* Util.swift */; };
+		FA36CAB12B57D0D400A7567D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA36CAB02B57D0D400A7567D /* Kingfisher */; };
+		FA36CAB32B57D2BB00A7567D /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36CAB22B57D2BB00A7567D /* UICollectionViewCellExtension.swift */; };
+		FA36CAB62B57D35800A7567D /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36CAB42B57D35700A7567D /* BookCollectionViewCell.swift */; };
+		FA36CAB72B57D35800A7567D /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA36CAB52B57D35800A7567D /* BookCollectionViewCell.xib */; };
+		FA36CAB92B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36CAB82B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift */; };
 		FA3FF29F2B576AE600B2217C /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF29E2B576AE600B2217C /* BookViewController.swift */; };
 		FA3FF2A12B576C1500B2217C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA3FF2A02B576C1500B2217C /* .gitignore */; };
 		FA3FF2A32B576D0D00B2217C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF2A22B576D0D00B2217C /* APIKey.swift */; };
@@ -40,6 +46,11 @@
 		FA01A7C52B56128A0067FFC1 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		FA01A7C72B5621970067FFC1 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		FA01A7C92B56577A0067FFC1 /* LottoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIManager.swift; sourceTree = "<group>"; };
+		FA36CAAD2B57CF7C00A7567D /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		FA36CAB22B57D2BB00A7567D /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		FA36CAB42B57D35700A7567D /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA36CAB52B57D35800A7567D /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA36CAB82B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFlowLayoutExtension.swift; sourceTree = "<group>"; };
 		FA3FF29E2B576AE600B2217C /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		FA3FF2A02B576C1500B2217C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FA3FF2A22B576D0D00B2217C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -57,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA36CAB12B57D0D400A7567D /* Kingfisher in Frameworks */,
 				FA01A7C32B5612060067FFC1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +96,8 @@
 		FA01A7AC2B5611BE0067FFC1 /* SeSAC4Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA36CAAC2B57CF7200A7567D /* Util */,
+				FA36CAA72B57CD7500A7567D /* View */,
 				FAA234792B57B0B500358A99 /* Model */,
 				FA3FF2AB2B57AC0600B2217C /* Extension */,
 				FA3FF2A82B57ABC600B2217C /* Protocol */,
@@ -114,6 +128,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FA36CAA72B57CD7500A7567D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA36CAB42B57D35700A7567D /* BookCollectionViewCell.swift */,
+				FA36CAB52B57D35800A7567D /* BookCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA36CAAC2B57CF7200A7567D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FA36CAAD2B57CF7C00A7567D /* Util.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		FA3FF2A42B576E3500B2217C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +166,8 @@
 			children = (
 				FA3FF2AC2B57AC1300B2217C /* UIViewControllerExtension.swift */,
 				FAA234772B57AF0500358A99 /* UIButtonExtension.swift */,
+				FA36CAB22B57D2BB00A7567D /* UICollectionViewCellExtension.swift */,
+				FA36CAB82B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -165,6 +198,7 @@
 			name = SeSAC4Network;
 			packageProductDependencies = (
 				FA01A7C22B5612060067FFC1 /* Alamofire */,
+				FA36CAB02B57D0D400A7567D /* Kingfisher */,
 			);
 			productName = SeSAC4Network;
 			productReference = FA01A7AA2B5611BE0067FFC1 /* SeSAC4Network.app */;
@@ -196,6 +230,7 @@
 			mainGroup = FA01A7A12B5611BE0067FFC1;
 			packageReferences = (
 				FA01A7C12B5612060067FFC1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FA36CAAF2B57D0D400A7567D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FA01A7AB2B5611BE0067FFC1 /* Products */;
 			projectDirPath = "";
@@ -212,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3FF2A12B576C1500B2217C /* .gitignore in Resources */,
+				FA36CAB72B57D35800A7567D /* BookCollectionViewCell.xib in Resources */,
 				FA01A7BA2B5611BF0067FFC1 /* LaunchScreen.storyboard in Resources */,
 				FA01A7B72B5611BF0067FFC1 /* Assets.xcassets in Resources */,
 				FA01A7B52B5611BE0067FFC1 /* Main.storyboard in Resources */,
@@ -228,12 +264,16 @@
 				FA01A7B22B5611BE0067FFC1 /* TranslatorViewController.swift in Sources */,
 				FA01A7C62B56128A0067FFC1 /* LottoViewController.swift in Sources */,
 				FA3FF2A72B57AA9000B2217C /* LanguageViewController.swift in Sources */,
+				FA36CAB62B57D35800A7567D /* BookCollectionViewCell.swift in Sources */,
+				FA36CAAE2B57CF7C00A7567D /* Util.swift in Sources */,
 				FA3FF2A32B576D0D00B2217C /* APIKey.swift in Sources */,
 				FA01A7C82B5621970067FFC1 /* MarketViewController.swift in Sources */,
 				FAA234782B57AF0500358A99 /* UIButtonExtension.swift in Sources */,
 				FAA2347D2B57C0BF00358A99 /* SendDataDelegate.swift in Sources */,
+				FA36CAB32B57D2BB00A7567D /* UICollectionViewCellExtension.swift in Sources */,
 				FA3FF29F2B576AE600B2217C /* BookViewController.swift in Sources */,
 				FA01A7AE2B5611BE0067FFC1 /* AppDelegate.swift in Sources */,
+				FA36CAB92B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
 				FA01A7B02B5611BE0067FFC1 /* SceneDelegate.swift in Sources */,
 				FA01A7CA2B56577A0067FFC1 /* LottoAPIManager.swift in Sources */,
 				FA3FF2AD2B57AC1300B2217C /* UIViewControllerExtension.swift in Sources */,
@@ -477,6 +517,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		FA36CAAF2B57D0D400A7567D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -484,6 +532,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA01A7C12B5612060067FFC1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		FA36CAB02B57D0D400A7567D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA36CAAF2B57D0D400A7567D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

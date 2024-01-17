@@ -54,11 +54,32 @@ struct Meta: Codable {
 
 
 class BookViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    @IBOutlet weak var bookSearchBar: UISearchBar!
+    @IBOutlet weak var bookCollectionView: UICollectionView!
+    
+    var books: [Document] = [] {
+        didSet {
+            bookCollectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bookCollectionView.delegate = self
+        bookCollectionView.dataSource = self
+        
+        let xib = UINib(nibName: BookCollectionViewCell.identifier, bundle: nil)
+        bookCollectionView.register(xib, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.setupLayout()
+        
+        bookCollectionView.collectionViewLayout = layout
+        
+        self.navigationItem.title = "고래밥님의 책장"
     }
 
     func callRequest(text: String) {
@@ -77,6 +98,8 @@ class BookViewController: UIViewController {
                 case .success(let success):
                     dump(success.documents)
                     
+                    self.books = success.documents
+                    
                 case .failure(let failure):
                     dump(failure)
                 }
@@ -87,8 +110,32 @@ class BookViewController: UIViewController {
 extension BookViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("검색바 return 감지")
         if let text = searchBar.text {
             callRequest(text: text)
         }
     }
 }
+
+
+extension BookViewController: UICollectionViewDelegate,
+                              UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return books.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as! BookCollectionViewCell
+        
+        cell.configureCell(data: books[indexPath.row])
+        
+        return cell
+    }
+}
+
+

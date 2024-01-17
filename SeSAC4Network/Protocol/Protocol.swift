@@ -5,7 +5,7 @@
 //  Created by Minho on 1/17/24.
 //
 
-protocol ReusableViewController {
+protocol ReusableView {
     
     static var identifier: String { get }
 }
