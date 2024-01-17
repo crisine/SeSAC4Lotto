@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA01A7AE2B5611BE0067FFC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7AD2B5611BE0067FFC1 /* AppDelegate.swift */; };
 		FA01A7B02B5611BE0067FFC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7AF2B5611BE0067FFC1 /* SceneDelegate.swift */; };
-		FA01A7B22B5611BE0067FFC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7B12B5611BE0067FFC1 /* ViewController.swift */; };
+		FA01A7B22B5611BE0067FFC1 /* TranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7B12B5611BE0067FFC1 /* TranslatorViewController.swift */; };
 		FA01A7B52B5611BE0067FFC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA01A7B32B5611BE0067FFC1 /* Main.storyboard */; };
 		FA01A7B72B5611BF0067FFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA01A7B62B5611BF0067FFC1 /* Assets.xcassets */; };
 		FA01A7BA2B5611BF0067FFC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA01A7B82B5611BF0067FFC1 /* LaunchScreen.storyboard */; };
@@ -19,13 +19,20 @@
 		FA01A7CA2B56577A0067FFC1 /* LottoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01A7C92B56577A0067FFC1 /* LottoAPIManager.swift */; };
 		FA3FF29F2B576AE600B2217C /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF29E2B576AE600B2217C /* BookViewController.swift */; };
 		FA3FF2A12B576C1500B2217C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA3FF2A02B576C1500B2217C /* .gitignore */; };
+		FA3FF2A32B576D0D00B2217C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF2A22B576D0D00B2217C /* APIKey.swift */; };
+		FA3FF2A72B57AA9000B2217C /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF2A62B57AA9000B2217C /* LanguageViewController.swift */; };
+		FA3FF2AA2B57ABD100B2217C /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF2A92B57ABD100B2217C /* Protocol.swift */; };
+		FA3FF2AD2B57AC1300B2217C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FF2AC2B57AC1300B2217C /* UIViewControllerExtension.swift */; };
+		FAA234782B57AF0500358A99 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA234772B57AF0500358A99 /* UIButtonExtension.swift */; };
+		FAA2347B2B57B0BF00358A99 /* LangType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2347A2B57B0BF00358A99 /* LangType.swift */; };
+		FAA2347D2B57C0BF00358A99 /* SendDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2347C2B57C0BF00358A99 /* SendDataDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA01A7AA2B5611BE0067FFC1 /* SeSAC4Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC4Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA01A7AD2B5611BE0067FFC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA01A7AF2B5611BE0067FFC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA01A7B12B5611BE0067FFC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA01A7B12B5611BE0067FFC1 /* TranslatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewController.swift; sourceTree = "<group>"; };
 		FA01A7B42B5611BE0067FFC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA01A7B62B5611BF0067FFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA01A7B92B5611BF0067FFC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +42,14 @@
 		FA01A7C92B56577A0067FFC1 /* LottoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIManager.swift; sourceTree = "<group>"; };
 		FA3FF29E2B576AE600B2217C /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		FA3FF2A02B576C1500B2217C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA3FF2A22B576D0D00B2217C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		FA3FF2A52B577F2600B2217C /* SeSAC4Codable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SeSAC4Codable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FA3FF2A62B57AA9000B2217C /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		FA3FF2A92B57ABD100B2217C /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		FA3FF2AC2B57AC1300B2217C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FAA234772B57AF0500358A99 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		FAA2347A2B57B0BF00358A99 /* LangType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangType.swift; sourceTree = "<group>"; };
+		FAA2347C2B57C0BF00358A99 /* SendDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +84,20 @@
 		FA01A7AC2B5611BE0067FFC1 /* SeSAC4Network */ = {
 			isa = PBXGroup;
 			children = (
+				FAA234792B57B0B500358A99 /* Model */,
+				FA3FF2AB2B57AC0600B2217C /* Extension */,
+				FA3FF2A82B57ABC600B2217C /* Protocol */,
+				FA3FF2A42B576E3500B2217C /* Resource */,
 				FA01A7C42B56127D0067FFC1 /* Controller */,
 				FA01A7AD2B5611BE0067FFC1 /* AppDelegate.swift */,
 				FA01A7AF2B5611BE0067FFC1 /* SceneDelegate.swift */,
-				FA01A7B12B5611BE0067FFC1 /* ViewController.swift */,
 				FA01A7B32B5611BE0067FFC1 /* Main.storyboard */,
 				FA01A7B62B5611BF0067FFC1 /* Assets.xcassets */,
 				FA01A7B82B5611BF0067FFC1 /* LaunchScreen.storyboard */,
 				FA01A7BB2B5611BF0067FFC1 /* Info.plist */,
 				FA01A7C92B56577A0067FFC1 /* LottoAPIManager.swift */,
+				FA3FF2A22B576D0D00B2217C /* APIKey.swift */,
+				FA3FF2A52B577F2600B2217C /* SeSAC4Codable.playground */,
 			);
 			path = SeSAC4Network;
 			sourceTree = "<group>";
@@ -85,11 +105,46 @@
 		FA01A7C42B56127D0067FFC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA01A7B12B5611BE0067FFC1 /* TranslatorViewController.swift */,
 				FA3FF29E2B576AE600B2217C /* BookViewController.swift */,
 				FA01A7C52B56128A0067FFC1 /* LottoViewController.swift */,
 				FA01A7C72B5621970067FFC1 /* MarketViewController.swift */,
+				FA3FF2A62B57AA9000B2217C /* LanguageViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA3FF2A42B576E3500B2217C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA3FF2A82B57ABC600B2217C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FA3FF2A92B57ABD100B2217C /* Protocol.swift */,
+				FAA2347C2B57C0BF00358A99 /* SendDataDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FA3FF2AB2B57AC0600B2217C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA3FF2AC2B57AC1300B2217C /* UIViewControllerExtension.swift */,
+				FAA234772B57AF0500358A99 /* UIButtonExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAA234792B57B0B500358A99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2347A2B57B0BF00358A99 /* LangType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,13 +225,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA01A7B22B5611BE0067FFC1 /* ViewController.swift in Sources */,
+				FA01A7B22B5611BE0067FFC1 /* TranslatorViewController.swift in Sources */,
 				FA01A7C62B56128A0067FFC1 /* LottoViewController.swift in Sources */,
+				FA3FF2A72B57AA9000B2217C /* LanguageViewController.swift in Sources */,
+				FA3FF2A32B576D0D00B2217C /* APIKey.swift in Sources */,
 				FA01A7C82B5621970067FFC1 /* MarketViewController.swift in Sources */,
+				FAA234782B57AF0500358A99 /* UIButtonExtension.swift in Sources */,
+				FAA2347D2B57C0BF00358A99 /* SendDataDelegate.swift in Sources */,
 				FA3FF29F2B576AE600B2217C /* BookViewController.swift in Sources */,
 				FA01A7AE2B5611BE0067FFC1 /* AppDelegate.swift in Sources */,
 				FA01A7B02B5611BE0067FFC1 /* SceneDelegate.swift in Sources */,
 				FA01A7CA2B56577A0067FFC1 /* LottoAPIManager.swift in Sources */,
+				FA3FF2AD2B57AC1300B2217C /* UIViewControllerExtension.swift in Sources */,
+				FA3FF2AA2B57ABD100B2217C /* Protocol.swift in Sources */,
+				FAA2347B2B57B0BF00358A99 /* LangType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
