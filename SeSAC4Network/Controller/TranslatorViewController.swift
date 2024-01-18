@@ -130,8 +130,7 @@ class TranslatorViewController: UIViewController {
     
     @IBAction func didSrcLangButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: LanguageViewController.identifier) as! LanguageViewController
-        
-        let selectedLanguage = srcLang
+
         selectedButton = .source
         
         vc.dataDelegate = self
@@ -143,7 +142,7 @@ class TranslatorViewController: UIViewController {
     @IBAction func didDescLangButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: LanguageViewController.identifier) as! LanguageViewController
 
-        let selectedLanguage = descLang
+
         selectedButton = .destination
         
         vc.dataDelegate = self
