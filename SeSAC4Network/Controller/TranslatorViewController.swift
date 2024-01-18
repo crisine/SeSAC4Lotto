@@ -48,16 +48,18 @@ class TranslatorViewController: UIViewController {
     @IBOutlet weak var descLangButton: UIButton!
     @IBOutlet weak var replaceEachOtherLangButton: UIButton!
     
+    var selectedButton: PapagoLangButtonType = .source
+    
     var srcLang = LangType.korean {
         didSet {
-            if let titleText = srcLang.value.first?.value {
+            if let titleText = Languages.data[srcLang.key] {
                 srcLangButton.setTitle(titleText, for: .normal)
             }
         }
     }
     var descLang = LangType.english {
         didSet {
-            if let titleText = descLang.value.first?.value {
+            if let titleText = Languages.data[descLang.key] {
                 descLangButton.setTitle(titleText, for: .normal)
             }
         }
@@ -70,6 +72,8 @@ class TranslatorViewController: UIViewController {
         
         configureNavigation()
         configureButtons()
+        
+        targetLabel.numberOfLines = 0
     }
     
     func configureNavigation() {
@@ -77,10 +81,10 @@ class TranslatorViewController: UIViewController {
     }
     
     func configureButtons() {
-        srcLangButton.setTitle(srcLang.value[srcLang.rawValue], for: .normal)
+        srcLangButton.setTitle(Languages.data[srcLang.key], for: .normal)
         srcLangButton.configureStyle()
     
-        descLangButton.setTitle(descLang.value[descLang.rawValue], for: .normal)
+        descLangButton.setTitle(Languages.data[descLang.key], for: .normal)
         descLangButton.configureStyle()
         
         replaceEachOtherLangButton.setImage(UIImage(systemName: "arrow.left.arrow.right"), for: .normal)
@@ -105,8 +109,8 @@ class TranslatorViewController: UIViewController {
                                     "X-Naver-Client-Secret": APIKey.clientSecret]
         
         let parameters: Parameters = ["text": sourceTextView.text!,
-                                      "source": srcLang.value.first!.key,
-                                      "target": descLang.value.first!.key]
+                                      "source": srcLang.key,
+                                      "target": descLang.key]
         
         AF.request(url, method: .post, parameters: parameters, headers: headers)
             .responseDecodable(of: Papago.self) { response in
@@ -127,10 +131,11 @@ class TranslatorViewController: UIViewController {
     @IBAction func didSrcLangButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: LanguageViewController.identifier) as! LanguageViewController
         
-        let selectedLanguage = srcLang.value.first!
+        let selectedLanguage = srcLang
+        selectedButton = .source
         
         vc.dataDelegate = self
-        vc.passLanguage(selectedLang: ["srcLang":selectedLanguage.key])
+        vc.passLanguage(selectedLang: srcLang)
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -138,10 +143,11 @@ class TranslatorViewController: UIViewController {
     @IBAction func didDescLangButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: LanguageViewController.identifier) as! LanguageViewController
 
-        let selectedLanguage = descLang.value.first!
+        let selectedLanguage = descLang
+        selectedButton = .destination
         
         vc.dataDelegate = self
-        vc.passLanguage(selectedLang: ["descLang":selectedLanguage.key])
+        vc.passLanguage(selectedLang: descLang)
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -155,24 +161,20 @@ class TranslatorViewController: UIViewController {
 }
 
 extension TranslatorViewController: SendDataDelegate {
-    func recieveData(response: [String: String]) {
+    func recieveData(response: LangType) {
         
         print("선택한 언어 LanguageViewController 로부터 돌려받음")
         
-        let buttonFrom = response.keys.first
-        let selectedLang = response.values.first
-        
-        let language = LangType(rawValue: selectedLang!)
+        let buttonFrom = selectedButton
+        let selectedLang = Languages.data[response.key]
         
         switch buttonFrom {
-        case "srcLang":
-            srcLangButton.setTitle(language?.value.first?.value, for: .normal)
-            srcLang = language!
-        case "descLang":
-            descLangButton.setTitle(language?.value.first?.value, for: .normal)
-            descLang = language!
-        default:
-            print("언어 선택 화면에서 데이터 넘겨받는 도중 문제 발생")
+        case .source:
+            srcLangButton.setTitle(selectedLang, for: .normal)
+            srcLang = response
+        case .destination:
+            descLangButton.setTitle(selectedLang, for: .normal)
+            descLang = response
         }
     }
 }

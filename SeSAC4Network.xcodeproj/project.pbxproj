@@ -32,6 +32,8 @@
 		FAA234782B57AF0500358A99 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA234772B57AF0500358A99 /* UIButtonExtension.swift */; };
 		FAA2347B2B57B0BF00358A99 /* LangType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2347A2B57B0BF00358A99 /* LangType.swift */; };
 		FAA2347D2B57C0BF00358A99 /* SendDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2347C2B57C0BF00358A99 /* SendDataDelegate.swift */; };
+		FAC694B12B58B0BC004409B1 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC694B02B58B0BC004409B1 /* Languages.swift */; };
+		FAC694B32B58B54A004409B1 /* PapagoLangButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC694B22B58B54A004409B1 /* PapagoLangButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		FAA234772B57AF0500358A99 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		FAA2347A2B57B0BF00358A99 /* LangType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangType.swift; sourceTree = "<group>"; };
 		FAA2347C2B57C0BF00358A99 /* SendDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataDelegate.swift; sourceTree = "<group>"; };
+		FAC694B02B58B0BC004409B1 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		FAC694B22B58B54A004409B1 /* PapagoLangButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoLangButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				FA01A7B12B5611BE0067FFC1 /* TranslatorViewController.swift */,
+				FA3FF2A62B57AA9000B2217C /* LanguageViewController.swift */,
 				FA3FF29E2B576AE600B2217C /* BookViewController.swift */,
 				FA01A7C52B56128A0067FFC1 /* LottoViewController.swift */,
 				FA01A7C72B5621970067FFC1 /* MarketViewController.swift */,
-				FA3FF2A62B57AA9000B2217C /* LanguageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA2347A2B57B0BF00358A99 /* LangType.swift */,
+				FAC694B02B58B0BC004409B1 /* Languages.swift */,
+				FAC694B22B58B54A004409B1 /* PapagoLangButtonType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,10 +275,12 @@
 				FA3FF2A32B576D0D00B2217C /* APIKey.swift in Sources */,
 				FA01A7C82B5621970067FFC1 /* MarketViewController.swift in Sources */,
 				FAA234782B57AF0500358A99 /* UIButtonExtension.swift in Sources */,
+				FAC694B12B58B0BC004409B1 /* Languages.swift in Sources */,
 				FAA2347D2B57C0BF00358A99 /* SendDataDelegate.swift in Sources */,
 				FA36CAB32B57D2BB00A7567D /* UICollectionViewCellExtension.swift in Sources */,
 				FA3FF29F2B576AE600B2217C /* BookViewController.swift in Sources */,
 				FA01A7AE2B5611BE0067FFC1 /* AppDelegate.swift in Sources */,
+				FAC694B32B58B54A004409B1 /* PapagoLangButtonType.swift in Sources */,
 				FA36CAB92B57D5F700A7567D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
 				FA01A7B02B5611BE0067FFC1 /* SceneDelegate.swift in Sources */,
 				FA01A7CA2B56577A0067FFC1 /* LottoAPIManager.swift in Sources */,

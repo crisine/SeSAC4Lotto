@@ -10,12 +10,11 @@ import UIKit
 class LanguageViewController: UIViewController {
     
     var passedLanguage: LangType?
-    var languages = LangType.allCases
+    var languages = Languages.data
     var dataDelegate : SendDataDelegate?
     var buttonFrom: String?
 
     @IBOutlet weak var langTableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +23,11 @@ class LanguageViewController: UIViewController {
         langTableView.dataSource = self
     }
 
-    func passLanguage(selectedLang: [String: String]) {
+    func passLanguage(selectedLang: LangType) {
         print("언어 넘겨받음")
-        let lang = selectedLang.first!
-        buttonFrom = lang.key
-        passedLanguage = LangType(rawValue: lang.value)
+        buttonFrom = languages[selectedLang.key]
+        passedLanguage = selectedLang
     }
-    
-    
 }
 
 extension LanguageViewController: UITableViewDelegate,
@@ -45,20 +41,20 @@ extension LanguageViewController: UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LangType.allCases.count
+        return Languages.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: "langTableViewCell", for: indexPath)
         
-        let currentRowLanguage = languages[indexPath.row].value
+        let currentRowLanguage = languages[LangType(rawValue: indexPath.row)!.key]
         
         // MARK: 이게 맞나...?
-        cell.textLabel?.text = currentRowLanguage.first?.value
+        cell.textLabel?.text = currentRowLanguage
         cell.textLabel?.font = .boldSystemFont(ofSize: 16)
         
-        if passedLanguage?.value == currentRowLanguage {
+        if Languages.data[passedLanguage!.key] == currentRowLanguage {
             cell.textLabel?.textColor = .green
         }
         
@@ -67,10 +63,12 @@ extension LanguageViewController: UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedLanguage = languages[indexPath.row].value.first!.key
-        
-        print("언어 돌려주는중")
-        dataDelegate?.recieveData(response: [buttonFrom!: selectedLanguage])
-        self.navigationController?.popViewController(animated: true)
+        if let selectedLanguage = LangType(rawValue: indexPath.row) {
+            print("언어 돌려주는중")
+            dataDelegate?.recieveData(response: selectedLanguage)
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            print("선택된 언어를 이전 화면으로 넘겨주는데 실패")
+        }
     }
 }

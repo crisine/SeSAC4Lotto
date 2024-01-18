@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번역된 문장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-JZ-Mir">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-JZ-Mir">
                                 <rect key="frame" x="20" y="599" width="353" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="kwg-Cl-r21"/>
@@ -34,7 +34,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="번역"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="번역하고 싶은 문장: TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZG4-e9-qj1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZG4-e9-qj1">
                                 <rect key="frame" x="20" y="157.33333333333334" width="353" height="361.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -214,7 +214,7 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="703.52112676056345"/>
         </scene>
-        <!--Item-->
+        <!--로또-->
         <scene sceneID="DFJ-oT-R4W">
             <objects>
                 <viewController storyboardIdentifier="LottoViewController" id="w65-EF-nwp" customClass="LottoViewController" customModule="SeSAC4Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -346,7 +346,7 @@
                             <constraint firstItem="ziL-23-aoj" firstAttribute="top" secondItem="QGd-pq-543" secondAttribute="bottom" constant="16" id="tqX-0H-7ij"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eyX-w3-Nc2"/>
+                    <tabBarItem key="tabBarItem" title="로또" image="ticket" catalog="system" id="eyX-w3-Nc2"/>
                     <connections>
                         <outlet property="dateLabel" destination="QGd-pq-543" id="9S7-Z1-Fvr"/>
                         <outlet property="numberTextField" destination="mgr-PA-PSO" id="rN6-Nf-uK3"/>
@@ -363,7 +363,7 @@
             </objects>
             <point key="canvasLocation" x="1979.3893129770991" y="703.52112676056345"/>
         </scene>
-        <!--Item-->
+        <!--업비트 화폐 일람-->
         <scene sceneID="o8c-45-XeO">
             <objects>
                 <viewController storyboardIdentifier="MarketViewController" id="IRi-cK-0lx" customClass="MarketViewController" customModule="SeSAC4Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -411,7 +411,7 @@
                             <constraint firstItem="5d4-Op-eif" firstAttribute="top" secondItem="qVp-JJ-xQQ" secondAttribute="top" id="tAH-kF-OPE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xv9-wp-aeC"/>
+                    <tabBarItem key="tabBarItem" title="업비트 화폐 일람" image="bitcoinsign.circle" catalog="system" id="xv9-wp-aeC"/>
                     <connections>
                         <outlet property="marketTableView" destination="5d4-Op-eif" id="wQH-vs-695"/>
                     </connections>
@@ -441,11 +441,11 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--Item-->
+        <!--Papago-->
         <scene sceneID="Bbj-U9-8pV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UFg-6F-Kfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="EtA-kl-PaD"/>
+                    <tabBarItem key="tabBarItem" title="Papago" image="character.bubble.fill.ko" catalog="system" id="EtA-kl-PaD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d5Q-Bh-mlQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -460,11 +460,11 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
-        <!--Item-->
+        <!--책장-->
         <scene sceneID="Dp3-Kd-1v1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Baf-c4-PRu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bOS-eg-wCz"/>
+                    <tabBarItem key="tabBarItem" title="책장" image="books.vertical" catalog="system" id="bOS-eg-wCz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0S-lz-2me">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -481,7 +481,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bitcoinsign.circle" catalog="system" width="128" height="123"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <image name="character.bubble.fill.ko" catalog="system" width="128" height="110"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="ticket" catalog="system" width="128" height="86"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

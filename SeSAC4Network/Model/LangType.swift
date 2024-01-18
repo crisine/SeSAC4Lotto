@@ -5,51 +5,49 @@
 //  Created by Minho on 1/17/24.
 //
 
-import Foundation
+enum LangType: Int {
+    case korean
+    case english
+    case japanese
+    case chinese
+    case taiwanese
+    case vietnamese
+    case indonesian
+    case thai
+    case deutsch
+    case russian
+    case espanol
+    case italian
+    case french
 
-enum LangType: String, CaseIterable {
-    case korean = "ko"
-    case english = "en"
-    case japanese = "ja"
-    case chinese = "zh-CN"
-    case taiwanese = "zh-TW"
-    case vietnamese = "vi"
-    case indonesian = "id"
-    case thai = "th"
-    case deutsch = "de"
-    case russian = "ru"
-    case espanol = "es"
-    case italian = "it"
-    case french = "fr"
-    
-    var value: [String: String] {
+    var key: String {
         switch self {
         case .korean:
-            return ["ko": "한국어"]
+            return "ko"
         case .english:
-            return ["en": "영어"]
+            return "en"
         case .japanese:
-            return ["ja": "일본어"]
+            return "ja"
         case .chinese:
-            return ["zh-CN": "중국어 간체"]
+            return "zh-CN"
         case .taiwanese:
-            return ["zh-TW": "중국어 번체"]
+            return "zh-TW"
         case .vietnamese:
-            return ["vi": "베트남어"]
+            return "vi"
         case .indonesian:
-            return ["id": "인도네시아어"]
+            return "id"
         case .thai:
-            return ["th": "태국어"]
+            return "th"
         case .deutsch:
-            return ["de": "독일어"]
+            return "de"
         case .russian:
-            return ["ru": "러시아어"]
+            return "ru"
         case .espanol:
-            return ["es": "스페인어"]
+            return "es"
         case .italian:
-            return ["it": "이탈리아어"]
+            return "it"
         case .french:
-            return ["fr": "프랑스어"]
+            return "fr"
         }
     }
 }

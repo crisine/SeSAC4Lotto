@@ -6,5 +6,5 @@
 //
 
 protocol SendDataDelegate {
-    func recieveData(response : [String: String]) -> Void
+    func recieveData(response : LangType) -> Void
 }
